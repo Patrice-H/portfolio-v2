@@ -28,9 +28,7 @@ describe('HomePageComponent', () => {
   });
 
   it('shoud render slogan', () => {
-    expect(
-      screen.getByText('Contruisons ensemble vos projets numériques')
-    ).toBeDefined();
+    expect(screen.getByText(/^Construisons ensemble/)).toBeDefined();
   });
 
   it('shoud render image', () => {
