@@ -24,6 +24,15 @@ describe('ContactPageComponent', () => {
 
   /*** Integrity component tests UI */
 
+  it('shoud render title', () => {
+    expect(screen.getByText('Contactez moi')).toBeDefined();
+  });
+
+  it('should render social networks buttons', () => {
+    expect(screen.getAllByAltText('LinkedIn')).toBeDefined();
+    expect(screen.getAllByAltText('GitHub')).toBeDefined();
+  });
+
   it('should render form with all fields', () => {
     expect(screen.getByLabelText('Entreprise')).toBeDefined();
     expect(screen.getByLabelText('Nom')).toBeDefined();
