@@ -25,4 +25,8 @@ export class ContactPageComponent {
   onSubmitForm(): void {
     console.log(this.formContainer.value);
   }
+
+  openNewPage(link: string) {
+    window.open(link);
+  }
 }
