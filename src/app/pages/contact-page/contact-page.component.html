@@ -4,11 +4,13 @@
     <img
       src="../../../assets/contact-linkedin.png"
       alt="LinkedIn"
+      id="linkedin"
       (click)="openNewPage('https://www.linkedin.com/in/patrice-h-b64439257/')"
     />
     <img
       src="../../../assets/contact-github.png"
       alt="GitHub"
+      id="github"
       (click)="openNewPage('https://github.com/Patrice-H')"
     />
   </div>
@@ -126,6 +128,7 @@
       <button
         (click)="onSubmitForm()"
         type="submit"
+        class="submit-btn"
         [disabled]="formContainer.invalid"
       >
         Envoyer
