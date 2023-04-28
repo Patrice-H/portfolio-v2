@@ -160,13 +160,13 @@ export const skills: any[] = [
     type: 'design',
   },
   {
-    name: 'dreamWeaver',
-    file: '../../../assets/dreamweaver.png',
+    name: 'Flash Pro',
+    file: '../../../assets/flashpro.png',
     type: 'design',
   },
   {
-    name: 'Flash Pro',
-    file: '../../../assets/flashpro.png',
+    name: 'dreamWeaver',
+    file: '../../../assets/dreamweaver.png',
     type: 'design',
   },
 ];
