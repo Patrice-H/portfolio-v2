@@ -1,0 +1,60 @@
+<div id="skill-tabs">
+  <div
+    class="skill-header active-skills"
+    id="conception-skills"
+    (click)="showSkills('conception')"
+  >
+    Analyse - Conception
+  </div>
+  <div
+    class="skill-header"
+    id="frontend-skills"
+    (click)="showSkills('frontend')"
+  >
+    Développement frontend
+  </div>
+  <div class="skill-header" id="backend-skills" (click)="showSkills('backend')">
+    Développement backend
+  </div>
+  <div class="skill-header" id="design-skills" (click)="showSkills('design')">
+    UX - Design
+  </div>
+</div>
+<div id="skill-body">
+  <section *ngIf="activatedPanel === 'conception'">
+    <div
+      *ngFor="let skill of conceptionSkills"
+      class="skill-container {{ skill.type }}"
+    >
+      <img src="{{ skill.file }}" alt="{{ skill.name }}" />
+      <h3>{{ skill.name }}</h3>
+    </div>
+  </section>
+  <section *ngIf="activatedPanel === 'frontend'">
+    <div
+      *ngFor="let skill of frontendSkills"
+      class="skill-container {{ skill.type }}"
+    >
+      <img src="{{ skill.file }}" alt="{{ skill.name }}" />
+      <h3>{{ skill.name }}</h3>
+    </div>
+  </section>
+  <section *ngIf="activatedPanel === 'backend'">
+    <div
+      *ngFor="let skill of backendSkills"
+      class="skill-container {{ skill.type }}"
+    >
+      <img src="{{ skill.file }}" alt="{{ skill.name }}" />
+      <h3>{{ skill.name }}</h3>
+    </div>
+  </section>
+  <section *ngIf="activatedPanel === 'design'">
+    <div
+      *ngFor="let skill of designSkills"
+      class="skill-container {{ skill.type }}"
+    >
+      <img src="{{ skill.file }}" alt="{{ skill.name }}" />
+      <h3>{{ skill.name }}</h3>
+    </div>
+  </section>
+</div>
