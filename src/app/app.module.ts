@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     ContactPageComponent,
     SkillsPageComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,
