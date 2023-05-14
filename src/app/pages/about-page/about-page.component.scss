@@ -1,0 +1,17 @@
+.about-title {
+  font-size: 36px;
+  text-align: center;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.about-me-img.desktop {
+  width: 66%;
+  float: right;
+  margin-left: 20px;
+}
+.about-me-text {
+  width: 80vw;
+  margin: auto;
+  line-height: 24px;
+}
