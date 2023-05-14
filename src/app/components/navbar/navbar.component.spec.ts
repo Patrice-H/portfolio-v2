@@ -17,10 +17,9 @@ describe('NavbarComponent', () => {
   });
 
   describe('UI tests suite', () => {
-    it('should create component', () => {
+    it('should create the component', () => {
       expect(component).toBeTruthy();
     });
-
     it('should render all menu items', () => {
       expect(screen.getByText('accueil')).toBeDefined();
       expect(screen.getByText('à propos')).toBeDefined();
@@ -28,7 +27,6 @@ describe('NavbarComponent', () => {
       expect(screen.getByText('projets')).toBeDefined();
       expect(screen.getByText('contact')).toBeDefined();
     });
-
     it('should render mobile menu', () => {
       expect(screen.getByAltText('menu')).toBeDefined();
     });
