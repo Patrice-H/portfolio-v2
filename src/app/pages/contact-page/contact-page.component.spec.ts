@@ -20,20 +20,17 @@ describe('ContactPageComponent', () => {
   });
 
   describe('UI tests suite', () => {
-    it('should create component', () => {
+    it('should create the page component', () => {
       expect(component).toBeTruthy();
     });
-
-    it('shoud render title', () => {
+    it('shoud render the title', () => {
       expect(screen.getByText('Contactez moi')).toBeDefined();
     });
-
-    it('should render social networks buttons', () => {
+    it('should render all social networks buttons', () => {
       expect(screen.getAllByAltText('LinkedIn')).toBeDefined();
       expect(screen.getAllByAltText('GitHub')).toBeDefined();
     });
-
-    it('should render form with all fields', () => {
+    it('should render the form with all fields', () => {
       expect(screen.getByLabelText('Entreprise')).toBeDefined();
       expect(screen.getByLabelText('Nom')).toBeDefined();
       expect(screen.getByLabelText('Prénom')).toBeDefined();
@@ -41,17 +38,14 @@ describe('ContactPageComponent', () => {
       expect(screen.getByLabelText('Sujet')).toBeDefined();
       expect(screen.getByTestId('message')).toBeDefined();
     });
-
     it('should render 2 required fields', () => {
       const requiredFields = screen.getAllByText('* requis');
       expect(requiredFields.length).toEqual(2);
     });
-
-    it('should render submit button', () => {
+    it('should render the submit button', () => {
       const button = screen.getByText('Envoyer');
       expect(button).toBeDefined();
     });
-
     it('should render an invalid empty form', () => {
       const formValues = component.formContainer.value;
       expect(formValues.companyName).toBe(null);
@@ -65,7 +59,7 @@ describe('ContactPageComponent', () => {
   });
 
   describe('Integration tests suite', () => {
-    it('should control required inputs', () => {
+    it('should control the required inputs', () => {
       const hostElement = fixture.nativeElement;
       const nameInput = hostElement.querySelector('#lastname');
       const emailInput = hostElement.querySelector('#email');
@@ -93,8 +87,7 @@ describe('ContactPageComponent', () => {
       expect(component.formContainer.value.eMail).toEqual(emailInput.value);
       expect(component.formContainer.status).toBe('INVALID');
     });
-
-    it('should control lastname input format', () => {
+    it('should control the lastname input format', () => {
       const hostElement = fixture.nativeElement;
       const nameInput = hostElement.querySelector('#lastname');
       nameInput.value = 1;
@@ -110,8 +103,7 @@ describe('ContactPageComponent', () => {
       expect(errorPattern).toBe(true);
       expect(component.formContainer.status).toBe('INVALID');
     });
-
-    it('should control email input format', () => {
+    it('should control the email input format', () => {
       const hostElement = fixture.nativeElement;
       const emailInput = hostElement.querySelector('#email');
       emailInput.value = 1;
@@ -127,7 +119,6 @@ describe('ContactPageComponent', () => {
       expect(errorPattern).toBe(true);
       expect(component.formContainer.status).toBe('INVALID');
     });
-
     it('should control a valid form', () => {
       const hostElement = fixture.nativeElement;
       const nameInput = hostElement.querySelector('#lastname');
