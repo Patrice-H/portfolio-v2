@@ -19,19 +19,16 @@ describe('HomePageComponent', () => {
   });
 
   describe('UI tests suite', () => {
-    it('should create component', () => {
+    it('should create the page component', () => {
       expect(component).toBeTruthy();
     });
-
-    it('shoud render title', () => {
+    it('shoud render the title', () => {
       expect(screen.getByText(/^Patrice-H/)).toBeDefined();
     });
-
-    it('shoud render slogan', () => {
+    it('shoud render the slogan', () => {
       expect(screen.getByText(/^Construisons ensemble/)).toBeDefined();
     });
-
-    it('shoud render image', () => {
+    it('shoud render the image', () => {
       expect(screen.getByAltText('main tendue')).toBeDefined();
     });
   });
