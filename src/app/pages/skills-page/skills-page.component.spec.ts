@@ -20,17 +20,15 @@ describe('SkillsPageComponent', () => {
   });
 
   describe('UI tests suite', () => {
-    it('should create component', () => {
+    it('should create the page component', () => {
       expect(component).toBeTruthy();
     });
-
     it('should render all tabs', () => {
       expect(screen.getByText('Analyse - Conception')).toBeTruthy();
       expect(screen.getByText('Développement frontend')).toBeTruthy();
       expect(screen.getByText('Développement backend')).toBeTruthy();
       expect(screen.getByText('UX - Design')).toBeTruthy();
     });
-
     it('should render all images of analyse and conception skills', () => {
       expect(screen.getByAltText('UML')).toBeTruthy();
       expect(screen.getByAltText('Agile')).toBeTruthy();
@@ -40,7 +38,6 @@ describe('SkillsPageComponent', () => {
       expect(screen.getByAltText('Trello')).toBeTruthy();
       expect(screen.getByAltText('GitHub')).toBeTruthy();
     });
-
     it('should render all titles of analyse and conception skills', () => {
       expect(screen.getByText('UML')).toBeTruthy();
       expect(screen.getByText('Agile')).toBeTruthy();
@@ -75,7 +72,6 @@ describe('SkillsPageComponent', () => {
       });
       expect(button.classes['active-skills']).toBe(true);
     });
-
     it('should render all titles of frontend dev skills when user click on tab', () => {
       const button = fixture.debugElement.query(By.css('#frontend-skills'));
       button.triggerEventHandler('click', null);
@@ -98,7 +94,6 @@ describe('SkillsPageComponent', () => {
       });
       expect(button.classes['active-skills']).toBe(true);
     });
-
     it('should render all images of backend dev skills when user click on tab', () => {
       const button = fixture.debugElement.query(By.css('#backend-skills'));
       button.triggerEventHandler('click', null);
@@ -120,7 +115,6 @@ describe('SkillsPageComponent', () => {
       });
       expect(button.classes['active-skills']).toBe(true);
     });
-
     it('should render all titles of backend dev skills when user click on tab', () => {
       const button = fixture.debugElement.query(By.css('#backend-skills'));
       button.triggerEventHandler('click', null);
@@ -142,7 +136,6 @@ describe('SkillsPageComponent', () => {
       });
       expect(button.classes['active-skills']).toBe(true);
     });
-
     it('should render all images of UX - Design skills when user click on tab', () => {
       const button = fixture.debugElement.query(By.css('#design-skills'));
       button.triggerEventHandler('click', null);
@@ -160,7 +153,6 @@ describe('SkillsPageComponent', () => {
       });
       expect(button.classes['active-skills']).toBe(true);
     });
-
     it('should render all titles of UX - Design skills when user click on tab', () => {
       const button = fixture.debugElement.query(By.css('#design-skills'));
       button.triggerEventHandler('click', null);
