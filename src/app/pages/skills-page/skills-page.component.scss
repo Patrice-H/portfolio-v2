@@ -1,6 +1,3 @@
-mat-expansion-panel {
-  margin: 0 50px;
-}
 section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -23,7 +20,7 @@ section {
 }
 #skill-tabs {
   width: fit-content;
-  margin: 20px auto;
+  margin: 70px auto;
 }
 .skill-header {
   border: solid 1px #cccccc;
@@ -48,14 +45,74 @@ section {
   border: solid 1px #cccccc;
   border-radius: 5px;
   width: 80vw;
-  margin: -16px auto;
+  margin: -66px auto;
   padding: 20px;
   background-color: #d9d9ff;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
+#frontend-skills::before {
+  content: "Développement frontend";
+}
+#backend-skills::before {
+  content: "Développement backend";
+}
+#conception-skills::before {
+  content: "Analyse - Conception";
+}
+#design-skills::before {
+  content: "UX - Design";
+}
 @media screen and (max-width: 992px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+  }
   .skill-header {
     margin-right: 0;
+  }
+  .skill-container {
+    margin-top: 10px;
+    img {
+      width: 20vw;
+    }
+  }
+  #frontend-skills::before {
+    content: "Frontend";
+  }
+  #backend-skills::before {
+    content: "Backend";
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    gap: 20px;
+  }
+  .skill-container {
+    width: fit-content;
+    h3 {
+      margin: 10px auto 0;
+      max-width: 20vw;
+      width: 100%;
+    }
+  }
+  #skill-body {
+    width: auto;
+    border: none;
+  }
+  #conception-skills::before {
+    content: "Conception";
+  }
+  #design-skills::before {
+    content: "UX Design";
+  }
+}
+@media screen and (max-width: 480px) {
+  section {
+    height: 85vh;
+  }
+  #skill-body {
+    height: 90vh;
   }
 }
