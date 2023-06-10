@@ -5,10 +5,4 @@ app-contact-page {
 app-skills-page {
   height: fit-content;
   height: moz-fit-content;
-  margin-top: 50px;
-}
-@media screen and (max-width: 992px) {
-  app-skills-page {
-    margin-top: 89px;
-  }
 }
