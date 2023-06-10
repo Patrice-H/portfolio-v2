@@ -3,22 +3,22 @@
     class="skill-header active-skills"
     id="conception-skills"
     (click)="showSkills('conception')"
-  >
-    Analyse - Conception
-  </div>
+  ></div>
   <div
     class="skill-header"
     id="frontend-skills"
     (click)="showSkills('frontend')"
-  >
-    Développement frontend
-  </div>
-  <div class="skill-header" id="backend-skills" (click)="showSkills('backend')">
-    Développement backend
-  </div>
-  <div class="skill-header" id="design-skills" (click)="showSkills('design')">
-    UX - Design
-  </div>
+  ></div>
+  <div
+    class="skill-header"
+    id="backend-skills"
+    (click)="showSkills('backend')"
+  ></div>
+  <div
+    class="skill-header"
+    id="design-skills"
+    (click)="showSkills('design')"
+  ></div>
 </div>
 <div id="skill-body">
   <section *ngIf="activatedPanel === 'conception'">
