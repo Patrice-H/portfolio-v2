@@ -165,7 +165,7 @@ export const skills: any[] = [
     type: 'design',
   },
   {
-    name: 'dreamWeaver',
+    name: 'Dream Weaver',
     file: '../../../assets/dreamweaver.png',
     type: 'design',
   },
