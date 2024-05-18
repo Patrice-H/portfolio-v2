@@ -10,6 +10,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     ContactPageComponent,
     SkillsPageComponent,
     AboutPageComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,
