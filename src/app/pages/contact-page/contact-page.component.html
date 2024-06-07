@@ -17,122 +17,18 @@
 </div>
 <div id="contact-form">
   <form [formGroup]="formContainer">
-    <div id="contact-data">
-      <fieldset id="contact">
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="lastname">Entreprise</label>
-          </div>
-          <input type="text" id="companyname" />
-        </div>
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="lastname">Nom</label>
-          </div>
-          <input
-            type="text"
-            [formControl]="formContainer.controls.lastName"
-            id="lastname"
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input matInput
+          placeholder="pat@example.com"
+          [formControl]="formContainer.controls.lastName"
+          id="lastname"
+          (blur)="updateErrorMessage()"
+          required
           />
-          <div class="errors-form">
-            <p
-              *ngIf="formContainer.controls.lastName.hasError('required')"
-              class="contact-form-error required-element"
-            >
-              * requis
-            </p>
-            <p
-              *ngIf="
-                formContainer.controls.lastName.hasError('required') &&
-                formContainer.controls.lastName.touched
-              "
-              class="contact-form-error error-message"
-            >
-              merci de renseigner votre nom
-            </p>
-            <p
-              *ngIf="formContainer.controls.lastName.hasError('pattern')"
-              class="contact-form-error error-message"
-            >
-              ne doit contenir que des lettres
-            </p>
-          </div>
-        </div>
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="firstname">Prénom</label>
-          </div>
-          <input type="text" id="firstname" />
-        </div>
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="email">E-mail</label>
-          </div>
-          <input
-            type="email"
-            [formControl]="formContainer.controls.eMail"
-            id="email"
-          />
-          <div class="errors-form">
-            <p
-              *ngIf="formContainer.controls.eMail.hasError('required')"
-              class="contact-form-error required-element"
-            >
-              * requis
-            </p>
-            <p
-              *ngIf="
-                formContainer.controls.eMail.hasError('required') &&
-                formContainer.controls.eMail.touched
-              "
-              class="contact-form-error error-message"
-            >
-              merci de renseigner votre e-mail
-            </p>
-            <p
-              *ngIf="formContainer.controls.eMail.hasError('pattern')"
-              class="contact-form-error error-message"
-            >
-              cet e-mail est invalide
-            </p>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset id="message">
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="subject">Sujet</label>
-          </div>
-          <input type="text" id="subject" />
-        </div>
-        <div class="contact-form-element">
-          <div class="contact-text">
-            <label for="message">Message</label>
-          </div>
-          <textarea
-            id="message"
-            data-testid="message"
-            [formControl]="formContainer.controls.message"
-            maxlength="256"
-          ></textarea>
-          <p
-            *ngIf="formContainer.controls.message.hasError('maxlength')"
-            class="contact-form-error error-message"
-          >
-            256 charactères maximum
-          </p>
-        </div>
-      </fieldset>
-    </div>
-    <div id="contact-submit">
-      <button
-        (click)="onSubmitForm()"
-        type="submit"
-        class="submit-btn"
-        [disabled]="formContainer.invalid"
-      >
-        Envoyer
-      </button>
-    </div>
+      <!--@if (formContainer.controls.lastName.invalid) {
+        <mat-error>{{errorMessage}}</mat-error>
+    }-->
+    </mat-form-field>
   </form>
 </div>
