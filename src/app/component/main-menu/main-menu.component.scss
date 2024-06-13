@@ -1,0 +1,51 @@
+#homeBtn {
+  margin-left: 0;
+}
+nav {
+  background-color: white;
+  height: 100px;
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      #fff2ff,
+      #fbbaf6,
+      #fb87ef,
+      #fbbaf6,
+      #fff2ff
+    );
+    & > div#basic-navbar {
+      display: none;
+    }
+    & > div#raised-navbar {
+      display: flex;
+    }
+  }
+}
+button {
+  display: block;
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+#basic-navbar {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  & button {
+    margin-left: 20px;
+    color: #766464;
+  }
+}
+#raised-navbar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: -50px;
+  & button {
+    color: #766464;
+  }
+}

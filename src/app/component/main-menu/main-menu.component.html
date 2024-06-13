@@ -1,0 +1,74 @@
+<nav (mouseover)="displayMenu()">
+  <div class="navbar" id="basic-navbar">
+    <button
+      mat-button
+      class="basic-Btn"
+      routerLink="/"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ homeBtnLabel }}
+    </button>
+    <button
+      mat-button
+      class="basic-Btn"
+      routerLink="/about"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ aboutBtnLabel }}
+    </button>
+    <button
+      mat-button
+      class="basic-Btn"
+      routerLink="/projects"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ projectsBtnLabel }}
+    </button>
+    <button
+      mat-button
+      class="basic-Btn"
+      routerLink="/contact"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ contactBtnLabel }}
+    </button>
+  </div>
+  <div class="navbar" id="raised-navbar">
+    <button
+      mat-raised-button
+      routerLink="/"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ homeBtnLabel }}
+    </button>
+    <button
+      mat-raised-button
+      routerLink="/about"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ aboutBtnLabel }}
+    </button>
+    <button
+      mat-raised-button
+      routerLink="/projects"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ projectsBtnLabel }}
+    </button>
+    <button
+      mat-raised-button
+      routerLink="/contact"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      {{ contactBtnLabel }}
+    </button>
+  </div>
+</nav>
