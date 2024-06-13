@@ -1,0 +1,13 @@
+#range-button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 50%;
+  margin: auto;
+}
+.enabled {
+  color: yellow;
+}
+.disabled {
+  color: black;
+}
