@@ -1,0 +1,57 @@
+<mat-card id="contact-container">
+  <mat-form-field appearance="outline">
+    <mat-label>{{ lastNameLabel }}</mat-label>
+    <input
+      matInput
+      #lastname
+      id="lastname"
+      [formControl]="lastName"
+      (blur)="updateErrorMessage(lastname)"
+    />
+    @if (lastName.invalid) {
+    <mat-error>{{ lastNameError }}</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ firstNameLabel }}</mat-label>
+    <input matInput id="firstname" [formControl]="firstName" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ companyLabel }}</mat-label>
+    <input matInput id="company" [formControl]="companyName" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ eMailLabel }}</mat-label>
+    <input
+      matInput
+      #email
+      id="email"
+      [formControl]="eMail"
+      (blur)="updateErrorMessage(email)"
+    />
+    @if (eMail.invalid) {
+    <mat-error>{{ eMailError }}</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ subjectLabel }}</mat-label>
+    <input matInput id="subject" [formControl]="subject" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ messageLabel }}</mat-label>
+    <textarea
+      matInput
+      #userMessage
+      id="message"
+      [formControl]="message"
+      (blur)="updateErrorMessage(userMessage)"
+    ></textarea>
+  </mat-form-field>
+  @if (message.invalid) {
+  <mat-error>{{ messageError }}</mat-error>
+  }
+  <p>{{ pLabel }}</p>
+  <button mat-raised-button id="button">
+    {{ buttonLabel }}
+  </button>
+</mat-card>
