@@ -2,31 +2,32 @@
   margin-left: 0;
 }
 nav {
-  background-color: white;
+  background-color: transparent;
   height: 100px;
   &:hover {
     background: linear-gradient(
       0deg,
+      white,
       #fff2ff,
       #fbbaf6,
       #fb87ef,
-      #fbbaf6,
-      #fff2ff
+      #f000f0
     );
-    & > div#basic-navbar {
-      display: none;
-    }
-    & > div#raised-navbar {
-      display: flex;
-    }
   }
 }
 button {
   display: block;
+  color: #766464;
+  font-size: 18px;
+  font-weight: bold;
+  
 }
 .navbar {
   display: flex;
   justify-content: space-evenly;
+  color: #766464;
+  font-size: 18px;
+  font-weight: bold;
 }
 #basic-navbar {
   position: absolute;
@@ -34,11 +35,10 @@ button {
   width: 100%;
   & button {
     margin-left: 20px;
-    color: #766464;
   }
 }
 #raised-navbar {
-  display: none;
+  display: flex;
   position: absolute;
   width: 100%;
   top: 25px;
