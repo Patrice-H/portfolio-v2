@@ -13,14 +13,17 @@ nav {
       #fb87ef,
       #f000f0
     );
+    & > div.navbar button{
+      background-color: transparent;
+      border: none;
+    }
   }
 }
 button {
   display: block;
   color: #766464;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  
 }
 .navbar {
   display: flex;
@@ -28,14 +31,6 @@ button {
   color: #766464;
   font-size: 18px;
   font-weight: bold;
-}
-#basic-navbar {
-  position: absolute;
-  top: 25px;
-  width: 100%;
-  & button {
-    margin-left: 20px;
-  }
 }
 #raised-navbar {
   display: flex;
@@ -47,5 +42,18 @@ button {
   margin-left: -50px;
   & button {
     color: #766464;
+    background-color: white;
+    &.active {
+      background-color: transparent;
+    }
+    &.active-btn {
+      color: purple;
+      background: transparent;
+      box-shadow: none;
+      cursor: default;
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 }
