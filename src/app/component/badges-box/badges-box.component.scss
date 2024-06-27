@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+}
+p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #766464;
+}
+.badges-box {
+  width: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.badge {
+  width: 25%;
+  text-align: center;
+}
+.long-legend {
+  line-height: 12px;
+}
