@@ -1,6 +1,11 @@
 button {
   font-size: 18px;
-}
-.but {
-  color: yellow;
+  background-color: #fff2ff;
+  color: #766464;
+  &:hover {
+    color: purple;
+  }
+  &.active-btn {
+    color: purple;
+  }
 }
