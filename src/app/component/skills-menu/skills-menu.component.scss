@@ -1,0 +1,19 @@
+#skills-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 20vw;
+}
+h1,
+h2 {
+  color: #fb87ef;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+}
+h1.active-skill,
+h2.active-skill {
+  color: purple;
+}
