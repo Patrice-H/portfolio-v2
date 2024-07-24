@@ -26,14 +26,14 @@ export class ButtonRowComponent implements OnInit {
     this.contentChange.emit(this.content);
     this.resetButtons();
     const id = 'frame-' + n;
-    const button = document.getElementById(id)
+    const button = document.getElementById(id);
     button?.classList.add('active-btn');
   }
 
   resetButtons() {
-    for(let i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
       const id = 'frame-' + i;
-      const button = document.getElementById(id)
+      const button = document.getElementById(id);
       button?.classList.remove('active-btn');
     }
   }
