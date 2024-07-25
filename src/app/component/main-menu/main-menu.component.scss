@@ -13,7 +13,7 @@ nav {
       #fb87ef,
       #f000f0
     );
-    & > div.navbar button{
+    & > div.navbar button {
       background-color: transparent;
       border: none;
     }
@@ -34,12 +34,7 @@ button {
 }
 #raised-navbar {
   display: flex;
-  position: absolute;
-  width: 100%;
-  top: 25px;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-left: -50px;
+  padding: 25px 60px 0;
   & button {
     color: #766464;
     background-color: white;
