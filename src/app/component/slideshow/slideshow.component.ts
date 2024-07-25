@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { ButtonRowComponent } from '../button-row/button-row.component';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slideshow',
   standalone: true,
-  imports: [MatCardModule, ButtonRowComponent],
+  imports: [],
   templateUrl: './slideshow.component.html',
   styleUrl: './slideshow.component.scss',
 })
-export class SlideshowComponent {}
+export class SlideshowComponent {
+  @Input() activeContent!: number;
+}
