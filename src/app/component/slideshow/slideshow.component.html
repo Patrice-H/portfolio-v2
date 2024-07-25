@@ -1,2 +1,11 @@
-<mat-card></mat-card>
-<app-button-row></app-button-row>
+<div id="slideshow">
+  @if (activeContent === 0) {
+  <img src="assets/collection_needs.jpg" alt="collection needs" id="desktop" />
+  } @if (activeContent === 1) {
+  <img src="assets/booki.jpg" alt="frontend" id="desktop" />
+  } @if (activeContent === 2) {
+  <img src="assets/server.jpg" alt="server" id="desktop" />
+  } @if (activeContent === 3) {
+  <img src="assets/booki.jpg" alt="desktop format" id="desktop" />
+  }
+</div>
