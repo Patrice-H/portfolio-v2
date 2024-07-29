@@ -1,6 +1,8 @@
 .about-title {
-  font-size: 36px;
-  text-align: center;
+  margin-left: 80px;
+  color: purple;
+  font-size: 32px;
+  font-weight: bold;
   &::first-letter {
     text-transform: uppercase;
   }
