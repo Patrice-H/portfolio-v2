@@ -1,1 +1,9 @@
-<p>home-page works!</p>
+<div id="home-page">
+  <app-skills-menu [activeContent]="newContent"></app-skills-menu>
+  <app-slideshow [activeContent]="newContent"></app-slideshow>
+  <app-badges-box [activeContent]="newContent"></app-badges-box>
+</div>
+<app-button-row
+  [number_of_buttons]="4"
+  (contentChange)="changeContent($event)"
+></app-button-row>
