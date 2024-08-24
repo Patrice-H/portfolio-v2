@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './main-menu.component.html',
   styleUrl: './main-menu.component.scss',
 })
-export class MainMenuComponent implements OnInit {
+export class MainMenuComponent{
   tabs: any[] = [
     {
       id: 'home-btn',
@@ -27,26 +27,22 @@ export class MainMenuComponent implements OnInit {
       page: 'about-page',
     },
     {
-      id: 'contact-btn',
-      link: '/contact',
-      label: 'Contact',
-      active: false,
-      page: 'contact-page',
-    },
-    {
       id: 'projects-btn',
       link: '/projects',
       label: 'Projets',
       active: false,
       page: 'projects-page',
     },
+    {
+      id: 'contact-btn',
+      link: '/contact',
+      label: 'Contact',
+      active: false,
+      page: 'contact-page',
+    },
   ];
   displayedMenu: Boolean = false;
   disabledButton: Boolean = true;
-
-  ngOnInit(): void {
-    this.activeBtn('home-btn');
-  }
 
   displayMenu(): void {
     this.displayedMenu = true;
