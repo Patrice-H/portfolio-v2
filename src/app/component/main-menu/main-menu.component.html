@@ -4,6 +4,7 @@
       *ngFor="let tab of tabs; let i = index"
       mat-raised-button
       id="{{ tab.id }}"
+      class="{{ tab.class }}"
       routerLink="{{ tab.link }}"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
