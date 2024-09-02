@@ -12,11 +12,7 @@ nav {
       #fbbaf6,
       #fb87ef,
       #f000f0
-    );
-    & > div.navbar button {
-      background-color: transparent;
-      border: none;
-    }
+    ); 
   }
 }
 button {
@@ -38,17 +34,12 @@ button {
   & button {
     color: #766464;
     background-color: white;
-    &.active {
-      background-color: transparent;
-    }
     &.active-btn {
       color: purple;
       background: transparent;
       box-shadow: none;
       cursor: default;
-      &:hover {
-        background: transparent;
-      }
     }
   }
 }
+
