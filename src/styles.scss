@@ -61,3 +61,7 @@ body {
 .mdc-text-field--outlined {
   background-color: white;
 }
+.mat-mdc-raised-button.active-btn:hover .mat-mdc-button-persistent-ripple::before {
+  opacity: 0;
+  background: transparent;
+}
