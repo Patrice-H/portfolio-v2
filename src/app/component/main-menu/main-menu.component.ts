@@ -47,7 +47,7 @@ export class MainMenuComponent implements OnInit{
     const rightIndex = (element: any) => element.link === this.location;
     const index = this.tabs.findIndex(rightIndex);
     this.tabs.forEach(tab => tab.class = '');
-    this.tabs[index].class = 'active-btn no-hover-effect';
+    this.tabs[index].class = 'active-btn';
   }
 
   displayMenu(): void {
